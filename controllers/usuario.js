@@ -16,7 +16,7 @@ exports.createUsuario = async (req, res) => {
   }
   const usuarioCriado = await Usuario.create(req.body)
 
-  if (usuarioCriado.idUsuarios){
+  if (usuarioCriado.idUsuarios && req.body.turmas_idTurmas){
     await UsuariosTurmas.create({
       turmas_idTurmas: req.body.idTurmas,
       Usuarios_idUsuarios: usuarioCriado.idUsuarios
@@ -57,3 +57,7 @@ exports.updateUsuario = async (req, res) => {
 
   }
 }
+
+const TipoUsuarios = require('../models/tipos_usuarios')
+
+export

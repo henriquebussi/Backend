@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 const sequelize = require("../config/sequelize");
 
 const TurmasUsuarios = sequelize.define(
-    "usuarios_turmas", {
+    "turmas_usuarios", {
         idTipos_Usuarios: {
             type: Sequelize.INTEGER,
             primaryKey: true, // Define essa coluna como a chave primária
@@ -15,4 +15,4 @@ const TurmasUsuarios = sequelize.define(
       }
 )
 
-module.exports = TipoUsuarios;
+module.exports = TurmasUsuarios;
